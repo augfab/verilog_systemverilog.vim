@@ -29,35 +29,43 @@ syn sync lines=1000
 "       SystemVerilog Syntax
 "##########################################################
 
-syn keyword verilogStatement   always and assign automatic buf
+syn keyword verilogTypeDef   input output inout event
+syn keyword verilogTypeDef   real reg wire signed unsigned
+syn keyword verilogTypeDef   logic bit byte time
+syn keyword verilogTypeDef   int longint shortint
+syn keyword verilogTypeDef   struct packed
+syn keyword verilogTypeDef   void shortreal chandle string
+syn keyword verilogTypeDef   automatic static
+syn keyword verilogTypeDef   virtual local const protected extern var
+
+syn keyword verilogStatement   always and assign buf
 syn keyword verilogStatement   bufif0 bufif1 cell cmos
 syn keyword verilogStatement   config deassign defparam design
 syn keyword verilogStatement   disable edge endconfig
 syn keyword verilogStatement   endgenerate
 syn keyword verilogStatement   endprimitive endtable
-syn keyword verilogStatement   event force fork join
+syn keyword verilogStatement   force fork join
 syn keyword verilogStatement   join_any join_none forkjoin
 syn keyword verilogStatement   generate genvar highz0 highz1 ifnone
-syn keyword verilogStatement   incdir include initial inout input
+syn keyword verilogStatement   incdir include initial
 syn keyword verilogStatement   instance integer large liblist
 syn keyword verilogStatement   library localparam macromodule medium
 syn keyword verilogStatement   nand negedge nmos nor
 syn keyword verilogStatement   noshowcancelled not notif0 notif1 or
-syn keyword verilogStatement   output parameter pmos posedge primitive
+syn keyword verilogStatement   parameter pmos posedge primitive
 syn keyword verilogStatement   pull0 pull1 pulldown pullup
 syn keyword verilogStatement   pulsestyle_onevent pulsestyle_ondetect
-syn keyword verilogStatement   rcmos real realtime reg release
+syn keyword verilogStatement   rcmos realtime release
 syn keyword verilogStatement   rnmos rpmos rtran rtranif0 rtranif1
-syn keyword verilogStatement   scalared showcancelled signed small
+syn keyword verilogStatement   scalared showcancelled small
 syn keyword verilogStatement   specparam strong0 strong1
-syn keyword verilogStatement   supply0 supply1 table time tran
+syn keyword verilogStatement   supply0 supply1 table tran
 syn keyword verilogStatement   tranif0 tranif1 tri tri0 tri1 triand
-syn keyword verilogStatement   trior trireg unsigned use vectored wait
-syn keyword verilogStatement   wand weak0 weak1 wire wor xnor xor
+syn keyword verilogStatement   trior trireg use vectored wait
+syn keyword verilogStatement   wand weak0 weak1 wor xnor xor
 
 syn keyword verilogStatement   always_comb always_ff always_latch
 syn keyword verilogStatement   checker endchecker
-syn keyword verilogStatement   virtual local const protected
 syn keyword verilogStatement   package endpackage
 syn keyword verilogStatement   rand randc constraint randomize
 syn keyword verilogStatement   with inside dist
@@ -65,23 +73,19 @@ syn keyword verilogStatement   randcase
 syn keyword verilogStatement   randsequence
 syn keyword verilogStatement   get_randstate set_randstate
 syn keyword verilogStatement   srandom
-syn keyword verilogStatement   logic bit byte time
-syn keyword verilogStatement   int longint shortint
-syn keyword verilogStatement   struct packed
 syn keyword verilogStatement   final
 syn keyword verilogStatement   import export
 syn keyword verilogStatement   context pure
-syn keyword verilogStatement   void shortreal chandle string
 syn keyword verilogStatement   modport
 syn keyword verilogStatement   cover coverpoint
 syn keyword verilogStatement   program endprogram
 syn keyword verilogStatement   bins binsof illegal_bins ignore_bins
-syn keyword verilogStatement   alias matches solve static assert
+syn keyword verilogStatement   alias matches solve assert
 syn keyword verilogStatement   assume before expect bind
-syn keyword verilogStatement   extends null tagged extern this
+syn keyword verilogStatement   extends null tagged this
 syn keyword verilogStatement   first_match throughout timeprecision
 syn keyword verilogStatement   timeunit priority type union
-syn keyword verilogStatement   uwire var cross ref wait_order intersect
+syn keyword verilogStatement   uwire cross ref wait_order intersect
 syn keyword verilogStatement   wildcard within
 syn keyword verilogStatement   triggered
 syn keyword verilogStatement   std
